@@ -1,0 +1,219 @@
+.icono-viaje{
+    height: 6rem;
+    width: 6rem;
+    margin: 1rem 1rem 1rem 1rem;
+}
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.562)), url(../img/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 55rem;
+}
+
+.new{
+    animation: new 8s linear infinite;
+}
+
+.paris{
+    animation: paris 8s linear infinite;
+}
+
+.san-francisco{
+    animation: san-francisco 8s linear infinite;
+}
+
+.egipto{
+    animation: egipto 8s linear infinite;
+}
+
+.londres{
+    animation: londres 8s linear infinite;
+}
+
+.italia{
+    animation: italia 8s linear infinite;
+}
+
+.india{
+    animation: india 8s linear infinite;
+}
+
+.grecia{
+    animation: grecia 8s linear infinite;
+}
+
+/* Primer linea */
+
+/* New York */
+
+@keyframes new {
+    0% {
+        border-color: #50ddca;
+    }
+
+    25% {
+        border-color: transparent; 
+    }
+
+    50% {
+        border-color: transparent; 
+    }
+
+    75% {
+        border-color: transparent; 
+    }
+
+    100% {
+        border-color: #50ddca;
+    }
+}
+
+/* Paris */
+
+@keyframes paris {
+    0% {
+        border-color: transparent;
+    }
+
+    25% {
+        border-color: #50ddca;
+    }
+
+    50% {
+        border-color: transparent; 
+    }
+
+    75% {
+        border-color: transparent; 
+    }
+}
+
+/* San Francisco */
+
+@keyframes san-francisco {
+    0% {
+        border-color: transparent;
+    }
+
+    25% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #50ddca;
+    }
+
+    75% {
+        border-color: transparent; 
+    }
+}
+
+/* Egipto */
+
+@keyframes egipto {
+    0% {
+        border-color: transparent;
+    }
+
+    25% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+
+    75% {
+        border-color: #50ddca;
+    }
+}
+
+
+
+/* Segunda linea */
+
+/* New York */
+
+@keyframes londres {
+    0% {
+        border-color: transparent;
+    }
+
+    25% {
+        border-color: transparent; 
+    }
+
+    50% {
+        border-color: transparent; 
+    }
+    
+    75% {
+        border-color: #50ddca;
+    }
+}
+
+/* Paris */
+
+@keyframes italia {
+    0% {
+        border-color: transparent;
+    }
+
+    25% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #50ddca;
+    }
+
+    75% {
+        border-color: transparent; 
+    }
+}
+
+/* San Francisco */
+
+@keyframes india {
+    0% {
+        border-color: transparent;
+    }
+
+    25% {
+        border-color: #50ddca;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+
+    75% {
+        border-color: transparent; 
+    }
+}
+
+/* Egipto */
+
+@keyframes grecia {
+    0% {
+        border-color: #50ddca;
+    }
+
+    25% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+
+    75% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: #50ddca;
+    }
+}
