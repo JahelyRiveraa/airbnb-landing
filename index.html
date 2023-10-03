@@ -5,168 +5,189 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/output.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <title> AirBNB </title>
 </head>
 <body>
 
-    <header class="w-full">
-        <nav class="text-white text-2xl font-bold flex justify-between container mx-auto px-20">
-            <div class="flex">
-                <img src="img/icono_viaje.png" alt="icono viaje" class="icono-viaje">
+    <header class="fixed top-0 left-0 w-full z-20 bg-transparent">
+        <nav class="text-white lg:text-xl xl:text-2xl font-bold flex flex-wrap md:flex-row justify-between items-center container mx-auto px-5 md:px-20 py-4 gap-y-5">
+            <img src="img/icono_viaje.png" alt="icono viaje" class="h-[4rem] lg:h-auto lg:w-24">
+            <button class="px-8 py-8 lg:hidden"></button>
+            <div class="w-full hidden md:w-auto lg:flex flex-row justify-between gap-x-14"> 
+                
+                    <a class=" hover:text-teal-200 transition duration-300" href="index.html">Hospedaje</a>
+                    <a class=" hover:text-teal-200 transition duration-300" href="">Experiencias</a> 
+                    <a class=" hover:text-teal-200 transition duration-300" href="">Experiencias en linea</a>
+            
             </div>
-            <div class="p-10 flex justify-between"> 
-                <nav>
-                    <a class="p-16 hover:text-teal-200 transition duration-300" href="index.html">Hospedaje</a>
-                    <a class="p-16 hover:text-teal-200 transition duration-300" href="">Experiencias</a> 
-                    <a class="p-16 hover:text-teal-200 transition duration-300" href="">Experiencias en linea</a>
-                </nav>
-            </div>
-            <div>
-                <a class="p-10 flex flex-row justify-between hover:text-teal-500 transition duration-300" href="index.html">Hazte Anfitrion</a>
-            </div>
+                <a class="hidden lg:flex flex-row justify-between hover:text-teal-500 transition duration-300 border-solid border-2 rounded-lg border-white hover:border-teal-500 px-4 py-4" href="index.html">Hazte Anfitrion</a>
         </nav>
+    </header>
 
-        <form class="flex bg-teal-200 bg-opacity-50 justify-between container rounded-[1.2rem] mx-auto mt-[6.5rem] py-[1rem] px-[1rem] w-4/5">
+    <section class="hero pt-[11rem] h-[43rem] lg:h-[55rem] lg:pt-[13rem]">
 
-            <div class="py-[1rem] px-[2rem] border-solid border-2 rounded-lg border-white mr-[2rem]">
-                <label class="text-white" for="ubicacion">Ubicacion</label>
-                <input type="text" id="ubicacion" placeholder="¿A donde viajas?">
+        <form class="flex flex-col py-3 px-3 
+        
+        bg-teal-200 w-4/5 bg-opacity-50 justify-between container rounded-[1.2rem] mx-auto lg:mt-[0rem] lg:py-[1rem] lg:px-[1rem]">
+
+            <div class="flex gap-x-6 py-2 mb-3 lg:py-[1rem] lg:px-[2rem] border-solid border-2 rounded-lg border-white lg:mr-[2rem] px-3">
+                <label class="text-white" for="ubicacion">Ubicacion: </label>
+                <input class="bg-transparent placeholder-teal-100 grow" type="text" id="ubicacion" placeholder="¿A donde viajas?">
             </div>
 
-            <div class="py-[1rem] px-[2rem] border-solid border-2 rounded-lg border-white mr-[2rem]">
-                <label class="text-white" for="llegada">Llegada</label>
-                <input class="cursor-pointer" type="date" id="llegada">
+            <div class="flex gap-x-8 py-2 mb-3 lg:py-[1rem] lg:px-[2rem] border-solid border-2 rounded-lg border-white lg:mr-[2rem] px-3">
+                <label class="text-white" for="llegada">Llegada: </label>
+                <input class="bg-transparent cursor-pointer text-teal-100 grow" type="date" id="llegada">
             </div>
 
-            <div class="py-[1rem] px-[2rem] border-solid border-2 rounded-lg border-white mr-[2rem]">
-                <label class="text-white" for="salida">Salida</label>
-                <input class="cursor-pointer" type="date" id="salida">
+            <div class="flex gap-x-12 py-2 mb-3 lg:py-[1rem] lg:px-[2rem] border-solid border-2 rounded-lg border-white lg:mr-[2rem] px-3">
+                <label class="text-white" for="salida">Salida: </label>
+                <input class="bg-transparent cursor-pointer text-teal-100 grow" type="date" id="salida">
             </div>
 
-            <div class="py-[1rem] px-[2rem] border-solid border-2 rounded-lg border-white mr-[2rem]">
-                <label class="text-white" for="huespedes">Huespedes</label>
-                <input type="number" id="huespedes" placeholder="¿Cuantos?">
+            <div class="flex gap-x-3 py-2 mb-3 lg:py-[1rem] lg:px-[2rem] border-solid border-2 rounded-lg border-white lg:mr-[2rem] px-3">
+                <label class="text-white" for="huespedes">Huespedes:</label>
+                <input class="bg-transparent placeholder-teal-100 grow" type="number" id="huespedes" placeholder="¿Cuantos?">
             </div>
 
-            <div class="flex flex-row items-center">
-                <input class="bg-teal-900 hover:bg-white py-[1rem] px-[2rem] rounded-lg text-white hover:text-teal-900 cursor-pointer transition duration-300" type="submit" value="Buscar">
+            <div class="flex flex-row justify-center lg:items-center">
+                <input class="bg-teal-900 hover:bg-white py-3 px-4
+                lg:py-[1rem] lg:px-[2rem] rounded-lg text-white hover:text-teal-900 cursor-pointer transition duration-300" type="submit" value="Buscar">
             </div>
         </form>
 
-        <div class="flex flex-col text-center container rounded-lg mx-auto mt-[15rem] w-1/5">
-            <p class="text-white text-2xl font-bolds py-[2rem] px-[1rem]"> ¿No sabes a donde ir? </p>
-            <a class="text-teal-800 hover:text-white text-2xl font-bold bg-white hover:bg-teal-800 bg-opacity-70 rounded-[1.2rem] py-[1rem] px-[.1rem] transition duration-300" href="#"> Busqueda Flexible</a>
+        <div class="flex flex-col text-center container rounded-lg mx-auto mt-[3rem] w-3/5 lg:mt-[15rem] lg:w-1/5">
+            <p class="text-white text-[1rem] lg:text-2xl font-bolds py-[1rem] px-[1rem]"> ¿No sabes a donde ir? </p>
+            <a class="text-teal-800 hover:text-white text-xl lg:text-2xl font-bold bg-white hover:bg-teal-800 bg-opacity-70 rounded-[1.2rem] py-[1rem] px-[.1rem] transition duration-300" href="#"> Busqueda Flexible</a>
         </div>
-    </header>
+    </section> 
 
-    <section class="mx-[5rem] mt-[4rem] w-6/5">
+    <section class="mx-[1rem] mt-[4rem]
+                    lg:mx-[5rem] lg:mt-[4rem] w-6/5">
         <div>
-            <h2 class="text-3xl font-bold text-center">Descubre alojamientos populares</h2>
+            <h2 class="text-[1.6rem] lg:text-3xl font-bold text-center">Descubre alojamientos populares</h2>
         </div>
 
-        <div class="grid grid-cols-4">
-            <div class="items-center flex mt-[3rem] mx-[1rem] border-solid border-2 rounded-lg border-white new">
-                <img class="h-[9rem] w-[9rem]" src="img/icono_destino_1.png" alt="">
+        <div class="grid grid-cols-2 lg:grid-cols-4">
+            <div class="items-center flex flex-col lg:flex-row mt-[3rem] mx-[1rem] border-solid border-2 rounded-lg border-white new">
+                <img class="
+                h-[6rem] w-[6rem]
+                lg:h-[9rem] lg:w-[9rem]" src="img/icono_destino_1.png" alt="">
                 <div>
-                    <h3 class="pl-[1rem] text-[1.8rem] font-bold text-teal-900"> New York </h3>
+                    <h3 class="pl-[1rem] text-center text-[1.5rem] lg:text-[1.8rem] font-bold text-teal-900"> New York </h3>
                     <p class="pl-[1rem]"> <span class="text-[1.6rem] font-bold text-teal-700">4</span> horas de avion </p>
                 </div>
             </div>
 
-            <div class="items-center flex mt-[3rem] mx-[1rem] border-solid border-2 rounded-lg border-white paris">
-                <img class="h-[9rem] w-[9rem]" src="img/icono_destino_2.png" alt="">
+            <div class="items-center flex flex-col lg:flex-row mt-[3rem] mx-[1rem] border-solid border-2 rounded-lg border-white paris">
+                <img class="
+                h-[6rem] w-[6rem]
+                lg:h-[9rem] lg:w-[9rem]" src="img/icono_destino_2.png" alt="">
                 <div>
-                    <h3 class="pl-[1rem] text-[1.8rem] font-bold text-teal-900"> Paris </h3>
+                    <h3 class="pl-[1rem] text-center text-[1.5rem] lg:text-[1.8rem] font-bold text-teal-900"> Paris </h3>
                     <p class="pl-[1rem]"><span class="text-[1.6rem] font-bold text-teal-700">4</span> horas de avion</p>
                 </div>
             </div>
 
-            <div class="items-center flex mt-[3rem] mx-[1rem] border-solid border-2 rounded-lg border-white san-francisco">
-                <img class="h-[9rem] w-[9rem]" src="img/icono_destino_3.png" alt="">
+            <div class="items-center flex flex-col lg:flex-row mt-[3rem] mx-[1rem] border-solid border-2 rounded-lg border-white san-francisco">
+                <img class="
+                h-[6rem] w-[6rem]
+                lg:h-[9rem] lg:w-[9rem]" src="img/icono_destino_3.png" alt="">
                 <div>
-                    <h3 class="pl-[1rem] text-[1.8rem] font-bold text-teal-900"> San Francisco</h3>
+                    <h3 class="pl-[1rem] text-center text-[1.5rem] lg:text-[1.8rem] font-bold text-teal-900"> San Francisco</h3>
                     <p class="pl-[1rem]"><span class="text-[1.6rem] font-bold text-teal-700">4</span> horas de avion</p>
                 </div>
             </div>
 
-            <div class="items-center flex mt-[3rem] mx-[1rem] border-solid border-2 rounded-lg border-white egipto">
-                <img class="h-[9rem] w-[9rem]" src="img/icono_destino_4.png" alt="">
+            <div class="items-center flex flex-col lg:flex-row mt-[3rem] mx-[1rem] border-solid border-2 rounded-lg border-white egipto">
+                <img class="
+                h-[6rem] w-[6rem]
+                lg:h-[9rem] lg:w-[9rem]" src="img/icono_destino_4.png" alt="">
                 <div>
-                    <h3 class="pl-[1rem] text-[1.8rem] font-bold text-teal-900"> Egipto</h3>
+                    <h3 class="pl-[1rem] text-center text-[1.5rem] lg:text-[1.8rem] font-bold text-teal-900"> Egipto</h3>
                     <p class="pl-[1rem]"><span class="text-[1.6rem] font-bold text-teal-700">4</span> horas de avion</p>
                 </div>
             </div>
 
-            <div class="items-center flex mt-[3rem] mx-[1rem] border-solid border-2 rounded-lg border-white londres">
-                <img class="h-[9rem] w-[9rem]" src="img/icono_destino_5.png" alt="">
+            <div class="items-center flex flex-col lg:flex-row mt-[3rem] mx-[1rem] border-solid border-2 rounded-lg border-white londres">
+                <img class="
+                h-[6rem] w-[6rem]
+                lg:h-[9rem] lg:w-[9rem]" src="img/icono_destino_5.png" alt="">
                 <div>
-                    <h3 class="pl-[1rem] text-[1.8rem] font-bold text-teal-900"> Londres</h3>
+                    <h3 class="pl-[1rem] text-center text-[1.5rem] lg:text-[1.8rem] font-bold text-teal-900"> Londres</h3>
                     <p class="pl-[1rem]"><span class="text-[1.6rem] font-bold text-teal-700">4</span> horas de avion</p>
                 </div>
             </div>
 
-            <div class="items-center flex mt-[3rem] mx-[1rem] border-solid border-2 rounded-lg border-white italia">
-                <img class="h-[9rem] w-[9rem]" src="img/icono_destino_6.png" alt="">
+            <div class="items-center flex flex-col lg:flex-row mt-[3rem] mx-[1rem] border-solid border-2 rounded-lg border-white italia">
+                <img class="
+                h-[6rem] w-[6rem]
+                lg:h-[9rem] lg:w-[9rem]" src="img/icono_destino_6.png" alt="">
                 <div>
-                    <h3 class="pl-[1rem] text-[1.8rem] font-bold text-teal-900"> Italia</h3>
+                    <h3 class="pl-[1rem] text-center text-[1.5rem] lg:text-[1.8rem] font-bold text-teal-900"> Italia</h3>
                     <p class="pl-[1rem]"><span class="text-[1.6rem] font-bold text-teal-700">4</span> horas de avion</p>
                 </div>
             </div>
 
-            <div class="items-center flex mt-[3rem] mx-[1rem] border-solid border-2 rounded-lg border-white india">
-                <img class="h-[9rem] w-[9rem]" src="img/icono_destino_7.png" alt="">
+            <div class="items-center flex flex-col lg:flex-row mt-[3rem] mx-[1rem] border-solid border-2 rounded-lg border-white india">
+                <img class="
+                h-[6rem] w-[6rem]
+                lg:h-[9rem] lg:w-[9rem]" src="img/icono_destino_7.png" alt="">
                 <div>
-                    <h3 class="pl-[1rem] text-[1.8rem] font-bold text-teal-900"> India</h3>
+                    <h3 class="pl-[1rem] text-center text-[1.5rem] lg:text-[1.8rem] font-bold text-teal-900"> India</h3>
                     <p class="pl-[1rem]"><span class="text-[1.6rem] font-bold text-teal-700">4</span> horas de avion</p>
                 </div>
             </div>
 
-            <div class="items-center flex mt-[3rem] mx-[1rem] border-solid border-2 rounded-lg border-white grecia">
-                <img class="h-[9rem] w-[9rem]" src="img/icono_destino_8.png" alt="">
+            <div class="items-center flex flex-col lg:flex-row mt-[3rem] mx-[1rem] border-solid border-2 rounded-lg border-white grecia">
+                <img class="
+                h-[6rem] w-[6rem]
+                lg:h-[9rem] lg:w-[9rem]" src="img/icono_destino_8.png" alt="">
                 <div>
-                    <h3 class="pl-[1rem] text-[1.8rem] font-bold text-teal-900"> Grecia</h3>
+                    <h3 class="pl-[1rem] text-center text-[1.5rem] lg:text-[1.8rem] font-bold text-teal-900"> Grecia</h3>
                     <p class="pl-[1rem]"><span class="text-[1.6rem] font-bold text-teal-700">4</span> horas de avion</p>
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
 
-    <section class="mx-[5rem] mt-[4rem] w-6/5">
+    <section class="mx-[1rem] mt-[4rem]
+    lg:mx-[5rem] lg:mt-[4rem] w-6/5">
         <div>
-            <h2 class="text-3xl font-bold text-center">Descubre alojamientos populares</h2>
+            <h2 class="text-[1.6rem] lg:text-3xl font-bold text-center">Descubre alojamientos populares</h2>
         </div>
 
-        <div class="flex justify-center mt-[2rem]">  
-            <div class="hover:scale-110 duration-300 hover:bg-teal-700 text-teal-900 hover:text-white border-solid border-2 rounded-lg border-slate-200 mr-[2rem] ml-[2rem] my-[2rem]">
+        <div class="grid grid-cols-1 lg:flex justify-center mt-[2rem]">  
+            <div class="h-[25rem] w-[20rem] lg:h-auto hover:scale-110 duration-300 hover:bg-teal-700 text-teal-900 hover:text-white border-solid border-2 rounded-lg border-slate-200 mx-auto mt-[2rem] mb-2 lg:my-[2rem] lg:mx-[2rem]">
                 <div class="items-center flex flex-col">
-                    <img class="h-[20rem] w-[20rem] px-[2rem] pt-[2rem] pb-[0]" src="img/vive_1.jpg" alt="">
+                    <img class="px-[1rem] pt-[2rem] lg:h-[20rem] lg:w-[20rem] lg:px-[2rem] lg:pt-[2rem] pb-[0]" src="img/vive_1.jpg" alt="">
                     <div>
-                        <h3 class="py-[1rem] text-[1.2rem] font-bold"> Escapadas al aire libre </h3>
+                        <h3 class="text-center py-[1rem] text-[1.2rem] font-bold"> Escapadas al aire libre </h3>
                     </div>
                 </div>
             </div>
 
-            <div class="hover:scale-110 duration-300 hover:bg-teal-700 text-teal-900 hover:text-white border-solid border-2 rounded-lg border-slate-200 mr-[2rem] my-[2rem]">
+            <div class="h-[25rem] w-[20rem] lg:h-auto hover:scale-110 duration-300 hover:bg-teal-700 text-teal-900 hover:text-white border-solid border-2 rounded-lg border-slate-200 mx-auto my-3 lg:my-[2rem] lg:mx-[2rem]">
                 <div class="items-center flex flex-col">
-                    <img class="h-[20rem] w-[20rem] px-[2rem] pt-[2rem] pb-[0]" src="img/vive_2.jpg" alt="">
+                    <img class="px-[1rem] pt-[2rem] lg:h-[20rem] lg:w-[20rem] lg:px-[2rem] lg:pt-[2rem] pb-[0]" src="img/vive_2.jpg" alt="">
                     <div>
                         <h3 class="py-[1rem] text-[1.2rem] font-bold"> Alojamientos unicos </h3>
                     </div>
                 </div>
             </div>
 
-            <div class="hover:scale-110 duration-300 hover:bg-teal-700 text-teal-900 hover:text-white border-solid border-2 rounded-lg border-slate-200 mr-[2rem] my-[2rem]">
+            <div class="h-[25rem] w-[20rem] lg:h-auto hover:scale-110 duration-300 hover:bg-teal-700 text-teal-900 hover:text-white border-solid border-2 rounded-lg border-slate-200 mx-auto my-3 lg:my-[2rem] lg:mx-[2rem]">
                 <div class="items-center flex flex-col">
-                    <img class="h-[20rem] w-[20rem] px-[2rem] pt-[2rem] pb-[0]" src="img/vive_3.jpg" alt="">
+                    <img class="px-[1rem] pt-[2rem] lg:h-[20rem] lg:w-[20rem] lg:px-[2rem] lg:pt-[2rem] pb-[0]" src="img/vive_3.jpg" alt="">
                     <div>
                         <h3 class="py-[1rem] text-[1.2rem] font-bold"> Alojamientos enteros </h3>
                     </div>
                 </div>
             </div>
 
-            <div class="hover:scale-110 duration-300 hover:bg-teal-700 text-teal-900 hover:text-white border-solid border-2 rounded-lg border-slate-200 mr-[2rem] my-[2rem]">
+            <div class="h-[25rem] w-[20rem] lg:h-auto hover:scale-110 duration-300 hover:bg-teal-700 text-teal-900 hover:text-white border-solid border-2 rounded-lg border-slate-200 mx-auto mt-3 mb-[2rem] lg:my-[2rem] lg:mx-[2rem]">
                 <div class="items-center flex flex-col">
-                    <img class="h-[20rem] w-[20rem] px-[2rem] pt-[2rem] pb-[0]" src="img/vive_4.jpg" alt="">
+                    <img class="px-[1rem] pt-[2rem] lg:h-[20rem] lg:w-[20rem] lg:px-[2rem] lg:pt-[2rem] pb-[0]" src="img/vive_4.jpg" alt="">
                     <div>
                         <h3 class="py-[1rem] text-[1.2rem] font-bold"> Con tu mascota </h3>
                     </div>
@@ -175,64 +196,67 @@
         </div>
     </section>
 
-    <section class="w-full my-[4rem]">
-        <div class="flex relative w-full h-[50rem]">
+    <section class="w-full my-[2rem] lg:my-[4rem]">
+        <div class="flex relative w-full h-[20rem] lg:h-[50rem]">
             <img src="/img/anfitrion.jpg" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-teal-600 flex justify-start items-center">
-                <div class="ml-[8rem]">
-                    <h3 class="text-[4rem] font-bold text-white mt-[.0rem]"> Animate a ser</h3>
-                    <h3 class="text-[4rem] font-bold text-white pb-[1rem]">
-                        anfitrion
-                    </h3>
-                    <p> <sp class="text-[1.4rem] font-bold text-teal-900"> Comparte tu espacio para ganar dinero <br> extra y aprovechar nuestras oportunidades</p>
-                        <div class="mt-[4rem]">
-                            <a class="text-teal-800 hover:text-white text-2xl font-bold bg-transparent hover:bg-teal-800 rounded-[1.2rem] py-[1rem] px-[3rem] border-solid border-[.2rem] hover:border-transparent transition duration-300" href="#"> Mas Informacion</a>
+                <div class="ml-[1.5rem] lg:ml-[8rem]">
+                    <h3 class="text-[1.6rem] lg:text-[4rem] font-bold text-white mt-[.0rem]"> Animate a ser</h3>
+                    <h3 class="text-[1.6rem] lg:text-[4rem] font-bold text-white pb-[1rem]">  anfitrion </h3>
+                    <p> <sp class="text-[.8rem] lg:text-[1.4rem] font-bold text-teal-900"> Comparte tu espacio para ganar dinero <br> extra y aprovechar nuestras oportunidades</p>
+                        <div class="mt-[2rem] lg:mt-[4rem]">
+                            <a class="text-teal-800 hover:text-white text-[1rem] lg:text-2xl font-bold bg-transparent hover:bg-teal-800 rounded-[1.2rem] py-[.8rem] px-[1rem] lg:py-[1rem] lg:px-[3rem] border-solid border-[.1rem] lg:border-[.2rem] hover:border-transparent transition duration-300" href="#"> Mas Informacion</a>
                         </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
 
-    <section class="mx-[5rem] mt-[4rem] w-6/5">
+    <section class="mx-[3rem] md:mx-[7rem] mt-[4rem] w-6/5 z-40">
         <div>
             <h2 class="text-3xl font-bold text-center">Descubre experiencias</h2>
             <p class="text-1xl font-bold text-center pt-[1rem] border-b-4 pb-[.5rem]">Actividades unicas con expertos loccales, en persona o en linea.</p>
         </div>
 
-        <div class="grid grid-cols-2 mt-[2rem]">  
-            <div class="col-span-1 hover:scale-110 duration-500 bg-slate-200 hover:bg-teal-600 text-teal-900 hover:text-white rounded-lg mr-[2rem] ml-[7rem] mt-[2rem] mb-[.1rem] pb-[2rem]">
-                <div class="items-center flex flex-col">
-                    <img class="h-[20rem] w-[20rem] px-[2rem] pt-[2rem] pb-[0]" src="img/experiencia_1.jpg" alt="">
+        <div class="grid md:grid-cols-2 mt-[3rem] gap-3 md:gap-12"> 
+            
+            <div class="w-auto col-span-1 hover:scale-110 duration-500 bg-slate-200 hover:bg-teal-600 text-teal-900 hover:text-white rounded-lg 
+                pb-[2rem]">
+                <div class="items-center flex md:flex-col">
+                    <img class="h-[10rem] w-[12rem] md:h-[20rem] md:w-[20rem] pl-[1rem] md:px-[2rem] pt-[2rem] pb-[0]" src="img/experiencia_1.jpg" alt="">
                     <div>
-                        <h3 class="py-[1rem] text-[1.2rem] font-bold text-center"> Experiencias </h3>
-                        <p class="py-[.1rem] text-[1.2rem] text-center">Actividades locales estes donde estes</p>
+                        <h3 class="py-[1rem] text-[.8rem] md:text-[1.2rem] font-bold text-center"> Experiencias </h3>
+                        <p class="py-[.1rem] text-[.8rem] md:text-[1.2rem] text-center">Actividades locales estes donde estes</p>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="w-auto row-span-2 md:flex md:flex-col md:justify-center hover:scale-105 duration-500 bg-teal-600 hover:bg-slate-200 text-white hover:text-teal-900 rounded-lg 
+                        pb-[2rem] md:px-8 md:py-8">
+                <div class="items-center flex md:flex-col">
+                            <img class="h-[10rem] w-[12rem] md:h-[20rem] md:w-[20rem] pl-[1rem] md:px-[2rem] pt-[2rem] pb-[0]" src="img/experiencia_3.jpg" alt="">
+                    <div>
+                        <h3 class="py-[1rem] text-[.8rem] md:text-[1.2rem] font-bold text-center"> Experiencias en linea </h3>
+                        <p class="py-[.1rem] text-[.8rem] md:text-[1.2rem] text-center"> Actividades interactivas en vivo </p>
                     </div>
                 </div>
             </div>
 
-            <div class="justify-center row-span-2 hover:scale-110 duration-500 bg-teal-600 hover:bg-slate-200 text-white hover:text-teal-900 rounded-lg mr-[7rem] ml-[.1rem] my-[2rem]">
-                <div class="items-center flex flex-col mt-[12rem]">
-                    <img class="h-[25rem] w-[25rem] px-[2rem] pt-[2rem] pb-[0]" src="img/experiencia_3.jpg" alt="">
-                    <div>
-                        <h3 class="py-[1rem] text-[1.2rem] font-bold text-center"> Experiencias en linea </h3>
-                        <p class="py-[.1rem] text-[1.2rem] text-center">Actividades interactivas en vivo</p>
-                    </div>
+            <div class="w-auto col-span-1 hover:scale-110 duration-500 bg-slate-200 hover:bg-teal-600 text-teal-900 hover:text-white rounded-lg 
+                pb-[2rem]">
+                <div class="items-center flex md:flex-col">
+                    <img class="h-[10rem] w-[12rem] md:h-[20rem] md:w-[20rem] pl-[1rem] md:px-[2rem] pt-[2rem] pb-[0]" src="img/experiencia_2.jpg" alt="">
+                        <div>
+                            <h3 class="py-[1rem] text-[.8rem] md:text-[1.2rem] font-bold text-center"> Experiencias </h3>
+                            <p class="py-[.1rem] text-[.8rem] md:text-[1.2rem] text-center"> Visita una ciudad y vive en ella </p>
+                        </div>
                 </div>
             </div>
-
-            <div class="col-span-[2 / 3] row-span-[1 / 3] hover:scale-110 duration-500 bg-slate-200 hover:bg-teal-600 text-teal-900 hover:text-white rounded-lg mr-[2rem] ml-[7rem] my-[2rem] pb-[2rem]">
-                <div class="items-center flex flex-col">
-                    <img class="h-[20rem] w-[20rem] px-[2rem] pt-[2rem] pb-[0]" src="img/experiencia_2.jpg" alt="">
-                    <div>
-                        <h3 class="py-[1rem] text-[1.2rem] font-bold text-center"> Experiencias </h3>
-                        <p class="py-[.1rem] text-[1.2rem] text-center">Visita una ciudad y vive en ella</p>
-                    </div>
-                </div>
-            </div>
+            
         </div>
-    </section>
+    </section> 
 
-    <footer class="mt-[2rem] pt-[3rem] pb-[3rem] w-6/5 bg-slate-200 border-t-2 border-slate-400">
+    <!-- <footer class="mt-[2rem] pt-[3rem] pb-[3rem] w-6/5 bg-slate-200 border-t-2 border-slate-400">
         <div class="grid grid-cols-4 mx-[6rem] mt-[2rem] mb-[2rem] pb-[2rem] border-b-2 border-slate-400">
             <div class="">
                 <h3 class="text-center">Acerca de</h3>
@@ -283,7 +307,7 @@
                 <a href="#">- Enlace Nuevo</a>
             </nav>
         </div>
-    </footer>
+    </footer> -->
 
 </body>
 </html>
